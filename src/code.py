@@ -119,27 +119,27 @@ def calibrate():
 
 def dance():
 
-    dtheta = 5
+    dtheta = 15
 
-    for key in ["l12", "l22"]:
+    for key in ["l12", "l22", "r12", "r22"]:
         SERVOS[key].angle = DEFAULT_ANGLE - JOINTS[key]["dir"]*dtheta
 
-    for key in ["r12", "r22"]:
-        SERVOS[key].angle = DEFAULT_ANGLE + JOINTS[key]["dir"]*dtheta
-
-    time.sleep(0.5)
-
-    for key in ["l12", "l22"]:
-        SERVOS[key].angle = DEFAULT_ANGLE + JOINTS[key]["dir"]*dtheta
-
-    for key in ["r12", "r22"]:
+    for key in ["l11", "l21", "r11", "r21"]:
         SERVOS[key].angle = DEFAULT_ANGLE - JOINTS[key]["dir"]*dtheta
 
     time.sleep(0.5)
 
+    for key in ["l12", "l22", "r12", "r22"]:
+        SERVOS[key].angle = DEFAULT_ANGLE + JOINTS[key]["dir"]*dtheta
 
-# while True:
-#     dance()
+    for key in ["l11", "l21", "r11", "r21"]:
+        SERVOS[key].angle = DEFAULT_ANGLE + JOINTS[key]["dir"]*dtheta
+
+    time.sleep(0.5)
+
+
+while True:
+    dance()
 
 
 print("Done.")
