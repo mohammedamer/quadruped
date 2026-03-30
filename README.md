@@ -7,3 +7,7 @@
 - SG90 servos
 
 ![quadruped](video/quadruped.gif)
+
+## Acknowledgement
+
+Original CADs from [here](https://www.instructables.com/4-Legged-Spider-Robot-With-3D-Printed-Parts-8-Serv).
