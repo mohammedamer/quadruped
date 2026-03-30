@@ -1,4 +1,4 @@
-# quadruped
+# Quadruped
 
 ## Hardware
 
